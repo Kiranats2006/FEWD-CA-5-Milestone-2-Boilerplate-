@@ -15,12 +15,17 @@ function App() {
     console.log('Option clicked:', isCorrect);
 
     // Increment score if the answer is correct
+    if(isCorrect){
+    setScore((prevScore)=>prevScore+1);}
     // Move to the next question
+    setCurrentQuestion((PrevQ)=>PrevQ+1);
   };
 
   // TASK 2: Write the logic to restart the quiz when this function is called.
   const restartQuiz = () => {
     // Reset score and current question
+    setScore(0);
+    setCurrentQuestion(0);
   };
 
   return (
